@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  div.reg-body.reg-body-signup
+    div.user-image
+        img(src='images/user.jpg', alt='user image')
+
+    div.info-header 用户注册
+
+    div.reg-form
+      form(action='/signup', method='post')
+        div.group-input
+          div.input-wrapper
+            input#user-name(type='text', name='username' placeholder='用户名')
+
+          div.input-wrapper
+            input#password(type='password', name='password' placeholder='密码')
+
+          div.input-wrapper
+            input#repeat-password(type='password', name='repeatPassword' placeholder='再次输入密码')
+
+          div.input-wrapper
+            input#student-number(type='text', name='studentNumber', placeholder='学号(8位)')
+
+          div.input-wrapper
+            input#tel-num(type='text' name='tel', placeholder='手机号(11位)')
+
+          div.input-wrapper
+            input#email(type='text' name='email', placeholder='邮箱')
+
+        div.input-button
+          input#reset-info.button(type='button', value='重置')
+
+          input#submit-info.button(type='button', value='注册')
+
+  script(type="text/javascript" src="javascripts/register.js")
+

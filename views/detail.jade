@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  div.reg-body
+    div.user-image
+      img(src='images/user.jpg', alt='user image')
+
+    div.info-header #{title}
+
+    div.reg-form
+      div.info-list
+        div 用户名:
+          span#user-name #{user.username}
+
+        div 学号:
+          span #{user.studentNumber}
+
+        div 电话:
+          span #{user.tel}
+
+        div 邮箱:
+          span #{user.email}
+
+      div.input-button
+        form(action='/', type='post')
+          input.button(type='submit', value='退出')
