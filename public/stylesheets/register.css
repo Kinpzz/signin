@@ -17,7 +17,8 @@ html {
     background-color: white;
 }
 .reg-body-signup {
-    height: 610px;
+    height: 680px;
+    margin-bottom: 60px;
 }
 .reg-body .user-image {
     overflow: hidden;

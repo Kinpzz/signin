@@ -60,6 +60,19 @@ var validator = {
       if (registry.hasOwnProperty(key) && registry[key][attr] == user[attr]) return false;
     }
     return true;
+  },
+
+  checkUser :function(user) {
+    var errorMessages = [];
+    for(var key in user) {
+      if (key != 'repeatPassword') {
+        if (!validator.isFieldValid(key, user[key])) {
+          errorMessages.push(validator.form[key].errorMessage);
+        }
+      }
+    }
+    if (user.password != user.repeatPassword) errorMessages.push('repeatPassword is not equal to password');
+    return errorMessages;
   }
 }
 
